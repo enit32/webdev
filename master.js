@@ -49,13 +49,19 @@ var donge = {
     rendimiento:15,
     escalarendimiento: "km/L",
     andar: (parametro1)=>{
-        //this.combustible = 100 
+        var a;
+        a = parametro1/ donge.rendimiento;
+        b = donge.combustible-a;
+        variable = 100*b/donge.combustible;
         /*
-        1-calcular el combustible gastado por un viaje dependiendo del parametro1 (en km/L).
+        1-calcular el combustible gastado por un viaje dependiendo del parametro1 (en km/L)
         2-indicarme cuanto combustible sobraría en el tanque de gasolina
         3-indicarme que porcentaje del tanque quedaria disponible despues del viaje 
         */
-        console.log("este viaje costará");
+        console.log("este viaje tiene un total de " + parametro1 +" km");
+        console.log("El combustible restante es de: " + b);
+        console.log('El tanque quedarà con un: '+variable+" porciento de gasolina")
+        
 
     }
 }
