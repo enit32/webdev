@@ -1,26 +1,35 @@
-/*var imagencama = document.getElementById('imagencama');
-var boton1 = document.getElementById("buton1");
-var entrada = document.getElementById("entrada");
-
-
-boton1.addEventListener('click', cambiarimagen);
-*/
-function cambiarimagen() {
-    var imagenDisponible = entrada.value;
-    console.log("hola mundo");
-    imagencama.setAttribute('src', imagenDisponible);
-    entrada.value = "";
-}
-
 function nuevafuncion(a,b) {
+   
     var resultado = "";
-    resultado = a + b;
+    if(isNaN(a)){
+        //console.log('no es un número');
+        resultado = "no es un número";
+    }else if(isNaN(b)){
+        //console.log('no es un número');
+        resultado = "no es un numero";   
+    }else {
+      resultado = a + b;
+    }
+    
 
     //console.log(resultado);
 
     return resultado;
 }
 
+var boton = document.getElementById('nombre');
+var nada = document.getElementById('nada');
+var numero1 = document.getElementById("in1");
+var numero2 = document.getElementById("in2");
+var resultado1;
+boton.addEventListener('click',modificarNada);
+
+function modificarNada() {
+   // nada.innerText = nuevafuncion();
+   parseInt(numero1.value, 10);
+resultado1= parseInt(numero1.value, 10) + parseInt(numero2.value, 10);
+   nada.innerText = resultado1; 
+}
 
 function otrafuncion(unsoloparametro) {
     return unsoloparametro  - 1;
