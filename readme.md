@@ -1,0 +1,1 @@
+Este es el archivo general de lectura
